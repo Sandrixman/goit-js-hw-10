@@ -1,11 +1,32 @@
 {
-  "name": "goit-js-hw-09",
-  "version": "1.0.0",
+  "name": "parcel-project-template",
+  "version": "2.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "homepage": "https://Sandrixman.github.io/goit-js-hw-09",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sandrixman/goit-js-hw-09.git"
+  },
+  "keywords": [],
+  "author": "Alexander>",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.throttle": "^4.1.1",
+    "modern-normalize": "^1.1.0",
+    "simplelightbox": "^2.12.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "@vimeo/player": "^2.18.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
