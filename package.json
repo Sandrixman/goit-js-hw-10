@@ -15,8 +15,10 @@
   "author": "Alexander>",
   "license": "ISC",
   "dependencies": {
+    "flatpickr": "^4.6.13",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6",
     "simplelightbox": "^2.12.1"
   },
   "devDependencies": {
