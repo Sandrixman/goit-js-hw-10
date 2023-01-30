@@ -1,15 +1,15 @@
 {
-  "name": "goit-js-hw-09",
+  "name": "goit-js-hw-10",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Sandrixman.github.io/goit-js-hw-09",
+  "homepage": "https://Sandrixman.github.io/goit-js-hw-10",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-09/"
+    "build": "parcel build src/*.html --public-url /goit-js-hw-10/"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Sandrixman/goit-js-hw-09.git"
+    "url": "https://github.com/Sandrixman/goit-js-hw-10.git"
   },
   "keywords": [],
   "author": "Alexander>",
