@@ -6,6 +6,7 @@ const debounce = require('lodash.debounce');
 
 const searchBox = document.querySelector('#search-box');
 const countryInfo = document.querySelector('.country-info');
+const countryList = document.querySelector('.country-list');
 const DEBOUNCE_DELAY = 300;
 
 searchBox.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
@@ -16,6 +17,7 @@ function onSearch() {
     fetchCountries(searchQuery).then(searchCountries).catch(error);
   } else {
     countryInfo.innerHTML = '';
+    countryList.innerHTML = '';
   }
 }
 
@@ -34,12 +36,28 @@ function error() {
 }
 
 function renderFoundCountries(countries) {
+  console.log(countries);
+
   const markup = countries
     .map(country => {
-      return `<li>
-            <p><b>Name</b>: ${country.name.official}</p>
-          </li>`;
+      return `<li class='list-item'>
+                <img src='${country.flags.svg}'>
+                <p>${country.name.official}</p>
+              </li>
+              <div class='card'>
+                <p><b>Capital</b>: ${country.capital}</p>
+                <p><b>Population</b>: ${country.population}</p>
+                <p><b>Languages</b>: ${Object.values(country.languages).join(
+                  ', '
+                )}</p>
+              </div>`;
     })
     .join('');
-  countryInfo.innerHTML = markup;
+  if (countries.length < 10 && countries.length > 2) {
+    countryList.innerHTML = markup;
+    countryInfo.innerHTML = '';
+  } else {
+    countryInfo.innerHTML = markup;
+    countryList.innerHTML = '';
+  }
 }

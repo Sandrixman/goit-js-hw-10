@@ -10,6 +10,12 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  margin: 30px;
+}
+
+img {
+  width: 30px;
+  margin-right: 10px;
 }
 
 #search-box {
@@ -17,4 +23,38 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+}
+
+.country-info .list-item {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.country-info img {
+  width: 50px;
+}
+
+.card {
+  font-size: 24px;
+}
+
+.country-list {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+.country-list .card {
+  display: none;
+}
+
+.list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.list-item p {
+  margin: 0;
 }
